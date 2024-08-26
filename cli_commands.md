@@ -1,5 +1,5 @@
 # FortiManager
-## update Software from tftp
+## Update Software from tftp
 
     fmg01 # execute restore image tftp FMG_VM64-v7.2.5-build1574-FORTINET.out <ip-tftp-server>
     Start getting file from TFTP Server...
@@ -29,7 +29,7 @@
     fmg01 # Connection to <ip-fmg> closed by remote host.
     Connection to <ip-fmg> closed.
 
-## reset
+## Reset
     fmg01 # execute reset all-except-ip 
     This operation will reset all settings to factory defaults, but will keep all interface IP and route configuration.
     Do you want to continue? (y/n)y
@@ -46,7 +46,7 @@
     Transferred 241.810M of 241.810M  in 0:00:04s (53.265M/s)
     Backup all settings...Ok.
     
-## restore from sftp
+## Restore from sftp
     fmg01 # execute restore all-settings sftp <ip-tftp-server> /opt/tftpboot/configuration/SYS_FMG-<serial>_fmg01_20240624_2300.dat admin <Password-SFTP> <Password-Backup> 
     This operation will replace the current settings and reboot the system
     Do you want to continue? (y/n)y
