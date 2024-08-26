@@ -38,6 +38,7 @@
     Connection to <ip-fmg> closed.
 
 # FortiAnalyzer
+## import Entitlementfile for airgapped setups
     faz01 # execute fmupdate tftp import license EntitlementExport <ip-sftp-server>
     This operation will replace the current fmupdate data!
     Do you want to continue? (y/n)y
