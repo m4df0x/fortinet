@@ -1,5 +1,5 @@
 # FortiManager
-## update Software from tftp ##
+## update Software from tftp
 
     fmg01 # execute restore image tftp FMG_VM64-v7.2.5-build1574-FORTINET.out <ip-tftp-server>
     Start getting file from TFTP Server...
