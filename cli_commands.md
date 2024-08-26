@@ -14,6 +14,21 @@
     fmg01-grau # Connection to <ip-fmg> closed by remote host.
     Connection to <ip-fmg> closed.
 
+## update Software from SFTP
+
+    fmg01 # execute restore image sftp opt/tftpboot/firmware/FortiManager/FMG_VM64-v7.2.5-build1574-FORTINET.out <ip-sftp-server>:22 <user-sftp> <Password-SFTP>
+    Start getting file from SFTP Server...
+    Transferred 265.938M of 265.938M in 0:00:03s (67.511M/s)
+
+    Upgrade FMG_VM64 image from v7.2.6-b1632-240809(GA) to v7.2.6-b1632-240809
+
+    This operation will replace the current firmware version and reboot the system!
+    Do you want to continue? (y/n)y
+
+
+    fmg01 # Connection to <ip-fmg> closed by remote host.
+    Connection to <ip-fmg> closed.
+
 ## reset
     fmg01 # execute reset all-except-ip 
     This operation will reset all settings to factory defaults, but will keep all interface IP and route configuration.
@@ -24,7 +39,12 @@
     Connection to <ip-fmg> closed.
     
 ## Backup to sftp
-    fmg01 # execute backup all-settings sftp <ip-sftp-server> /opt/tftpboot/ <user-sftp> <Password-SFTP> <Password-Backup> 
+    fmg01 # execute backup all-settings sftp <ip-sftp-server> /opt/tftpboot/ <user-sftp> <Password-SFTP> <Password-Backup>
+    Starting backup all settings in background please wait.
+
+    Starting transfer the backup file to SFTP server...
+    Transferred 241.810M of 241.810M  in 0:00:04s (53.265M/s)
+    Backup all settings...Ok.
     
 ## restore from sftp
     fmg01 # execute restore all-settings sftp <ip-tftp-server> /opt/tftpboot/configuration/SYS_FMG-<serial>_fmg01_20240624_2300.dat admin <Password-SFTP> <Password-Backup> 
