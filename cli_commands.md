@@ -22,7 +22,10 @@
     Resetting ...
     Connection to <ip-fmg> closed by remote host.
     Connection to <ip-fmg> closed.
-
+    
+## Backup to sftp
+    fmg01 # execute backup all-settings sftp <ip-sftp-server> /opt/tftpboot/ <user-sftp> <Password-SFTP> <Password-Backup> 
+    
 ## restore from sftp
     fmg01 # execute restore all-settings sftp <ip-tftp-server> /opt/tftpboot/configuration/SYS_FMG-<serial>_fmg01_20240624_2300.dat admin <Password-SFTP> <Password-Backup> 
     This operation will replace the current settings and reboot the system
@@ -33,6 +36,20 @@
 
     fmg01 # Connection to <ip-fmg> closed by remote host.
     Connection to <ip-fmg> closed.
-# FortiAnalyzer
 
+# FortiAnalyzer
+    faz01 # execute fmupdate tftp import license EntitlementExport <ip-sftp-server>
+    This operation will replace the current fmupdate data!
+    Do you want to continue? (y/n)y
+
+    Start getting file from TFTP Server...
+
+    TFTP transfer is successful.
+    Package installation is in process... This could take some time.
+    Update successfully
+
+    faz01 # The session is expired.
+    exit
+    Connection to <ip-faz> closed.
+    
 # FortiGate
