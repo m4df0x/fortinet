@@ -77,5 +77,13 @@
     faz01 # exec lvm extend
     This operation will need to reboot the system.
     Do you want to continue? (y/n)y
-    
+
+# FortiWeb
+## redirect FortiGuard to FortiManager for airgapped setups
+    fwb01 # config system autoupdate override
+    set status enable
+    set address <fortimanager_ip>:8890
+    set fail-over disable
+    end
+
 # FortiGate
