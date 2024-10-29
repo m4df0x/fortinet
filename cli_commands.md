@@ -73,4 +73,9 @@
     exit
     Connection to <ip-faz> closed.
     
+## resize logdisk
+    faz01 # exec lvm extend
+    This operation will need to reboot the system.
+    Do you want to continue? (y/n)y
+    
 # FortiGate
