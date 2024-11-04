@@ -74,9 +74,26 @@
     Connection to <ip-faz> closed.
     
 ## resize logdisk
-    faz01 # exec lvm extend
+### before
+    faz01 # execute lvm info
+    LVM Status: OK
+    LVM Size: 1000GB
+    File System: ext4 983GB
+
+    Disk1 :         Used     1000GB of 2000GB
+
+    faz01 # execute lvm extend
     This operation will need to reboot the system.
+    And all data in unused disks will be lost.
     Do you want to continue? (y/n)y
+### after
+    faz01 # execute lvm info
+    LVM Status: OK
+    LVM Size: 2000GB
+    File System: ext4 1968GB
+
+    Disk1 :         Used     2000GB
+    
 
 # FortiWeb
 ## redirect FortiGuard to FortiManager for airgapped setups
