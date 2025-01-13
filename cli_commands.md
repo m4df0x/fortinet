@@ -1,3 +1,6 @@
+
+
+
 # FortiManager
 ## Update Software from tftp
 
@@ -104,3 +107,40 @@
     end
 
 # FortiGate
+
+# FortiMail
+### Backup CLI TFTP with FilePassword
+    fem01 # execute backup full-config tftp fortimail.cfg <ip-tftp-server> <FILE-PASSWORD>
+    User defined configuartion can be updated with command "exec user-config generate".
+    User defined configuration last updated time: Mon Jan 13 09:00:00 2025
+    IBE data can be updated with command "execute ibe data export-to-file".
+    IBE data last updated time: Sun Jan 12 21:00:05 2025
+    System time: Mon Jan 13 09:00:00 2025
+    Backup with current user defined configuration and current ibe data. Do you want to continue? (y/n)y
+    Connect to tftp server <ip-tftp-server> ...
+    Please wait...
+    #
+    Send file to tftp server OK.
+
+### Backup CLI TFTP without FilePassword
+    fem01 # execute backup full-config tftp fortimail.cfg <ip-tftp-server>
+    User defined configuartion can be updated with command "exec user-config generate".
+    User defined configuration last updated time: Mon Jan 13 09:00:00 2025
+    IBE data can be updated with command "execute ibe data export-to-file".
+    IBE data last updated time: Sun Jan 12 21:00:05 2025
+    System time: Mon Jan 13 09:00:00 2025
+    Backup with current user defined configuration and current ibe data. Do you want to continue? (y/n)y
+    Connect to tftp server <ip-tftp-server> ...
+    Please wait...
+    #
+    Send file to tftp server OK.
+
+### Backup CLI SCP
+    fem01 # execute backup full-config scp /opt/tftpboot/fortimail.cfg <ip-scp-server> <scp-user> <scp-password>
+    User defined configuartion can be updated with command "exec user-config generate".
+    User defined configuration last updated time: Mon Jan 13 09:00:00 2025
+    IBE data can be updated with command "execute ibe data export-to-file".
+    IBE data last updated time: Mon Jan 13 09:00:05 2025
+    System time: Mon Jan 13 09:28:36 2025
+    Backup with current user defined configuration and current ibe data. Do you want to continue? (y/n)y
+    Send file to server with SCP OK.
