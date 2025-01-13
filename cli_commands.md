@@ -1,7 +1,11 @@
+# Table of Content
+* [FortiManager](#FortiManager);
+* [FortiAnalyzer](#FortiAnalyzer);
+* [FortiWeb](#FortiWeb);
+* [FortiGate](#FortiGate);
+* [FortiMail](#FortiMail);
 
-
-
-# FortiManager
+# <a name="FortiManager"></a>FortiManager
 ## Update Software from tftp
 
     fmg01 # execute restore image tftp FMG_VM64-v7.2.5-build1574-FORTINET.out <ip-tftp-server>
@@ -60,7 +64,7 @@
     fmg01 # Connection to <ip-fmg> closed by remote host.
     Connection to <ip-fmg> closed.
 
-# FortiAnalyzer
+# <a name="FortiAnalyzer"></a>FortiAnalyzer
 ## import Entitlementfile for airgapped setups
     faz01 # execute fmupdate tftp import license EntitlementExport <ip-sftp-server>
     This operation will replace the current fmupdate data!
@@ -98,7 +102,7 @@
     Disk1 :         Used     2000GB
     
 
-# FortiWeb
+# <a name="FortiWeb"></a>FortiWeb
 ## redirect FortiGuard to FortiManager for airgapped setups
     fwb01 # config system autoupdate override
     set status enable
@@ -106,9 +110,9 @@
     set fail-over disable
     end
 
-# FortiGate
+# <a name="FortiGate"></a>FortiGate
 
-# FortiMail
+# <a name="FortiMail"></a>FortiMail
 ### Backup CLI TFTP with FilePassword
     fem01 # execute backup full-config tftp fortimail.cfg <ip-tftp-server> <FILE-PASSWORD>
     User defined configuartion can be updated with command "exec user-config generate".
