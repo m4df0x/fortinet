@@ -4,6 +4,7 @@
 * [FortiWeb](#FortiWeb);
 * [FortiGate](#FortiGate);
 * [FortiMail](#FortiMail);
+* [FortiPAM](#FortiPAM);
 
 # <a name="FortiManager"></a>FortiManager
 ## Update Software from tftp
@@ -109,6 +110,19 @@
     set address <fortimanager_ip>:8890
     set fail-over disable
     end
+## manually upload vmlicence into FortiWeb
+    fwb01# execute restore vmlicense tftp <license>.lic <ip-tftp-server>
+    This operation will replace the current VM license !
+    Do you want to continue? (y/n)y
+
+    Connect to tftp server <ip-tftp-server> ...
+    Please wait...
+
+    Get license from tftp server OK.
+    License has been uploaded. Please wait a few seconds for license authentication with Fortinet registration servers.
+    Requires Internet connection. After verification, the system will reboot.
+
+    Please wait a few seconds for license authentication.
 
 # <a name="FortiGate"></a>FortiGate
 
@@ -148,3 +162,9 @@
     System time: Mon Jan 13 09:28:36 2025
     Backup with current user defined configuration and current ibe data. Do you want to continue? (y/n)y
     Send file to server with SCP OK.
+# <a name="FortiPAM"></a>FortiPAM
+## manually upload vmlicence into FortiPAM
+    jumphost # scp -O FPAVULTM26000106.lic admin@<ip-fortipam>:vmlicense
+    admin@<ip-fortipam>'s password: 
+    <license>.lic     100% 9108    12.1MB/s   00:00    
+    100-install VM license completed
