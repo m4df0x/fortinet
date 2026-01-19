@@ -164,7 +164,7 @@
     Send file to server with SCP OK.
 # <a name="FortiPAM"></a>FortiPAM
 ## manually upload vmlicence into FortiPAM
-    jumphost # scp -O FPAVULTM26000106.lic admin@<ip-fortipam>:vmlicense
+    jumphost # scp -O <license>.lic admin@<ip-fortipam>:vmlicense
     admin@<ip-fortipam>'s password: 
     <license>.lic     100% 9108    12.1MB/s   00:00    
     100-install VM license completed
