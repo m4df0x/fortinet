@@ -1,7 +1,10 @@
 # Table of Content
+* [Settings on FortiGate](#settings);
 * [Boot from USB formatted NTFS](#bootntfs);
 * [Boot from USB formatted FAT32](#bootfat32);
 
+# <a name="settings"></a>Settings
+![de:hub.de-Projekt](settings.png)
 # <a name="bootntfs"></a>Boot from USB formatted NTFS
 
     FortiGate-70F (18:33-06.02.2026)
