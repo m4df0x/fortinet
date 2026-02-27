@@ -66,4 +66,4 @@
     System is starting...
 
 
-FortiGate-70F login:
+    FortiGate-70F login:
