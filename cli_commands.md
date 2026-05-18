@@ -124,6 +124,10 @@
 
     Please wait a few seconds for license authentication.
 
+## get UUID for Offline-Licenses
+    fwb01# diagnose hardware sysinfo vm
+    UUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
 # <a name="FortiGate"></a>FortiGate
 
 # <a name="FortiMail"></a>FortiMail
